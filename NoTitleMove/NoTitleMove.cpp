@@ -5,7 +5,8 @@
 
 constexpr int MAX_LOADSTRING = 128;
 
-LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+LRESULT CALLBACK WndProc1(HWND, UINT, WPARAM, LPARAM);
+LRESULT CALLBACK WndProc2(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -21,7 +22,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     WNDCLASSEXW wcex;
     wcex.cbSize = sizeof(WNDCLASSEX);
     wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = WndProc;
+    wcex.lpfnWndProc = WndProc1;
+    wcex.lpfnWndProc = WndProc2;
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = hInstance;
@@ -59,7 +61,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     return (int)msg.wParam;
 }
 
-LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK WndProc1(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     switch (msg)
     {
@@ -82,6 +84,47 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
         }
         return nHitTest;
     }
+
+    case WM_DESTROY:
+    {
+        ::PostQuitMessage(0);
+        return 0;
+    }
+    }
+    return ::DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+LRESULT CALLBACK WndProc2(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    static short MouseState = 2;
+    switch (msg)
+    {
+    case WM_PAINT:
+    {
+        PAINTSTRUCT ps;
+        HDC hdc = BeginPaint(hWnd, &ps);
+        // TODO: 在此处添加使用 hdc 的任何绘图代码...
+        EndPaint(hWnd, &ps);
+    }
+    break;
+    case WM_MOUSEMOVE:
+    {
+        if (MouseState == 1)
+        {
+            ::SendMessage(hWnd, WM_SYSCOMMAND, SC_MOVE | HTCAPTION, NULL);
+        }
+    }
+    break;
+    case WM_LBUTTONDOWN:
+    {
+        MouseState = 1;
+    }
+    break;
+    case WM_LBUTTONUP:
+    {
+        MouseState = 2;
+    }
+    break;
 
     case WM_DESTROY:
     {
