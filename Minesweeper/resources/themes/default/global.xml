@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Global>
+    <!--所有字体-->
+    <!--0-->
+    <Font name="system" size="10" />
+    <!--1-->
+    <Font name="system" size="12" />
+    <!--2-->
+    <Font name="system" size="14" />
+    <!--3-->
+    <Font name="system" size="16" />
+    <!--4-->
+    <Font name="system" size="18" />
+    <!--5-->
+    <Font name="system" size="10" bold="true" />
+    <!--6-->
+    <Font name="system" size="12" bold="true" />
+    <!--7-->
+    <Font name="system" size="14" bold="true" />
+    <!--8-->
+    <Font name="system" size="16" bold="true" />
+    <!--9-->
+    <Font name="system" size="18" bold="true" />
+    <!--10-->
+    <Font name="arial" size="10" />
+    <!--11-->
+    <Font name="arial" size="12" />
+    <!--12-->
+    <Font name="arial" size="14" />
+    <!--13-->
+    <Font name="arial" size="16" />
+    <!--14-->
+    <Font name="arial" size="18" />
+    <!--15-->
+    <Font name="arial" size="10" bold="true" />
+    <!--16-->
+    <Font name="arial" size="12" bold="true" />
+    <!--17-->
+    <Font name="arial" size="14" bold="true" />
+    <!--18-->
+    <Font name="arial" size="16" bold="true" />
+    <!--19-->
+    <Font name="arial" size="18" bold="true" />
+    <!--20-->
+    <Font name="system" size="20" />
+    <!--21-->
+    <Font name="system" size="20" bold="true" />
+    <!--22-->
+    <Font name="system" size="22" />
+    <!--23-->
+    <Font name="system" size="22" bold="true" />
+    <!--24-->
+    <Font name="system" size="12" underline="true" />
+    <!--25-->
+    <Font name="system" size="24" />
+    <!--26-->
+    <Font name="system" size="14" underline="true" />
+    <!--27-->
+    <Font name="system" size="16" underline="true" />
+    <!--28-->
+    <Font name="system" size="32" />
+
+    <!--文字色值，不带透明层-->
+    <TextColor name="textdefaultcolor" value="#ff333333" />
+    <TextColor name="textdefaultdisablecolor" value="#ffa1aebc" />
+
+    <!--窗口常用背景色-->
+    <TextColor name="bk_main_wnd_title" value="#ff238efa" />
+    <TextColor name="bk_main_wnd_search" value="#ff1e7ad7" />
+    <TextColor name="bk_wnd_darkcolor" value="#fff0f2f5" />
+    <TextColor name="bk_wnd_lightcolor" value="#ffffffff" />
+    <TextColor name="bk_menuitem_hovered" value="#ffe1e6eb" />
+    <TextColor name="bk_menuitem_selected" value="#ffced4db" />
+    <TextColor name="bk_listitem_hovered" value="#fff0f2f5" />
+    <TextColor name="bk_listitem_selected" value="#ffe4e7eb" />
+
+
+    <!--调色板色值-->
+    <TextColor name="color_palette1" value="#ffff2600" />
+    <TextColor name="color_palette2" value="#ffffeb00" />
+    <TextColor name="color_palette3" value="#ff61ed00" />
+    <TextColor name="color_palette4" value="#ff00b4ff" />
+    <TextColor name="color_palette5" value="#ffa100ff" />
+    <TextColor name="color_palette6" value="#ff000000" />
+    <TextColor name="color_palette7" value="#ff545454" />
+    <TextColor name="color_palette8" value="#ffa8a8a8" />
+    <TextColor name="color_palette9" value="#ffffffff" />
+
+    
+    <Class name="btn_wnd_min" value="width=&quot;auto&quot; height=&quot;auto&quot; forenormalimage=&quot;file='./imgs/btn_wnd_gray_min.png' dest='4,4,16,16'&quot; normalimage=&quot;&quot; hotimage=&quot;./imgs/btn_wnd_gray_min_hovered.png&quot; pushedimage=&quot;./imgs/btn_wnd_gray_min_pushed.png&quot;" />
+    <Class name="btn_wnd_close" value="width=&quot;20&quot; height=&quot;20&quot; normalimage=&quot;file='./imgs/btn_wnd_gray_close.png' dest='4,4,16,16'&quot; hotimage=&quot;./imgs/btn_wnd_white_close_hovered.png&quot; pushedimage=&quot;./imgs/btn_wnd_white_close_pushed.png&quot; fadehot=&quot;false&quot;" />
+    <Class name="minesweeper_cube" value="width=&quot;40&quot; height=&quot;40&quot; bordersize=&quot;0,0,0,0&quot; bordercolor=&quot;color_palette6&quot; margin=&quot;0,0,0,0&quot; normalimage=&quot;./imgs/mines_normal.png&quot; hotimage=&quot;./imgs/mines_clicked.png&quot;" />
+    <Class name="primary_btn" value="width=&quot;auto&quot; height=&quot;auto&quot; normalimage=&quot;./imgs/menu_normal.png&quot; hotimage=&quot;./imgs/menu_hot.png&quot; pushedimage=&quot;./imgs/menu_push.png&quot;" />
+    <Class name="intermediate_btn" value="width=&quot;auto&quot; height=&quot;auto&quot; normalimage=&quot;./imgs/menu_normal.png&quot; hotimage=&quot;./imgs/menu_hot.png&quot; pushedimage=&quot;./imgs/menu_push.png&quot;" />
+    <Class name="advanced_btn" value="width=&quot;auto&quot; height=&quot;auto&quot; normalimage=&quot;./imgs/menu_normal.png&quot; hotimage=&quot;./imgs/menu_hot.png&quot; pushedimage=&quot;./imgs/menu_push.png&quot;" />
+    <Class name="counter_mines_label" value="width=&quot;23&quot; height=&quot;23&quot; bordersize=&quot;1,1,1,1&quot; margin=&quot;3,0,3,0&quot; normalimage=&quot;./imgs/mines.png&quot;" />
+    <Class name="counter_label" value="width=&quot;13&quot; height=&quot;23&quot; normalimage=&quot;./imgs/mines_time_0.png&quot;" />
+    <Class name="control_game_btn" value="width=&quot;21&quot; height=&quot;21&quot; normalimage=&quot;./imgs/mines_ing_normal.png&quot; pushedimage=&quot;./imgs/mines_ing_push.png&quot;" />
+
+</Global>

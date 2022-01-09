@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,400" caption="0,0,0,30">
+    <VBox bkcolor="bk_wnd_darkcolor">
+        <HBox width="stretch" height="30" bkcolor="bk_wnd_lightcolor">
+            <Button class="primary_btn" name="primary" text="初级" valign="center" halign="center" />
+            <Button class="intermediate_btn" name="intermediate" text="中级" valign="center" halign="center" />
+            <Button class="advanced_btn" name="advanced" text="高级" valign="center" halign="center" />
+            <Control />
+            <Label name="title_mineclearing font_title" text="扫雷" valign="center" halign="center" />
+            <Control />
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0" />
+            <Control width="10" />
+            <Control width="10" />
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0" />
+        </HBox>
+        <HBox width="stretch" height="23">
+            <Label class="counter_mines_label" name="counter_mines"></Label>
+            <HBox name="counter_hbox" width="auto" height="23">
+                <Label class="counter_label" name="conter_03"></Label>
+                <Label class="counter_label" name="conter_02"></Label>
+                <Label class="counter_label" name="conter_01"></Label>
+            </HBox>
+            <Control />
+            <Button class="control_game_btn" name="control_game" valign="center" halign="center" />
+            <Control />
+        </HBox>
+        <VBox name="cube_vbox" margin="0,0,0,0" />
+    </VBox>
+</Window>
